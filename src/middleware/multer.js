@@ -7,10 +7,11 @@ const storage = new CloudinaryStorage({
     params: {
         folder: 'clinic_images',
         allowed_formats: ['jpg', 'jpeg', 'png'],
-        transformation: [{ width: 800, height: 800, crop: 'limit' }]
-    }
+        transformation: [{ width: 800, height: 800, crop: 'limit' }],
+    },
+
 })
 
-const upload = multer({ storage: storage })
+const uploadWithCloud = multer({ storage: storage })
 
-module.exports = upload
+module.exports = uploadWithCloud
